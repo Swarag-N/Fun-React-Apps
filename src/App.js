@@ -1,5 +1,6 @@
 import React from 'react';
-import Clicker from './Clicker'
+// import Clicker from './Clicker/Clicker'
+import Die from './Dice/Die';
 import logo from './logo.svg';
 import './App.css';
 
@@ -8,18 +9,9 @@ function App() {
     <div className="App">
       <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        <Clicker />
-        {/* <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a> */}
+        {/* <Clicker /> */}
+        <Die  face='one'/>
+        <Die  face='six'/>
       </header>
     </div>
   );
