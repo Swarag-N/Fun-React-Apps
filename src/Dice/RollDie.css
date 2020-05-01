@@ -1,0 +1,16 @@
+.RollDie button{
+    widows: 10em;
+    padding: 10px;
+    border: 0px;
+    border-radius: 10px;
+    color: aliceblue;
+    background-color: blueviolet;
+}
+
+.RollDie button:hover{
+    background-color: aliceblue;
+    color: blueviolet;
+}
+/* .RollDie{
+    border: red solid 2rem;
+} */

@@ -3,9 +3,8 @@ import './Die.css'
 
 class Die extends Component{
     render(){
-        console.log(`fa-dice-${this.props.face}`)
         return (
-            <i class={` Die fas fa-dice-${this.props.face}`}></i>
+            <i class={` Die fas fa-dice-${this.props.face} ${this.props.roll && 'rolling'}`}></i>
         )
     }
 }

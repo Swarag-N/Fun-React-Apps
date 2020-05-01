@@ -1,18 +1,15 @@
 import React from 'react';
 // import Clicker from './Clicker/Clicker'
-import Die from './Dice/Die';
+// import RollDie from './Dice/RollDie';
+import Lottory from './Loto/Lottory';
 import logo from './logo.svg';
 import './App.css';
 
 function App() {
   return (
     <div className="App">
-      <header className="App-header">
         <img src={logo} className="App-logo" alt="logo" />
-        {/* <Clicker /> */}
-        <Die  face='one'/>
-        <Die  face='six'/>
-      </header>
+        <Lottory />
     </div>
   );
 }
