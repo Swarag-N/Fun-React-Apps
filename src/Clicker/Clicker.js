@@ -23,6 +23,7 @@ class Clicker extends Component{
     render(){
         return(
             <div className="Clicker">
+                <h1>Count Clicks</h1>
                 <h1>{this.state.num}</h1>
                 <div className="Clicker-Button">
                     {this.state.status?<h1>Game Over</h1>:<button onClick={this.eHandler}>Click Me</button>}

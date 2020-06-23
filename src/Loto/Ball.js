@@ -1,11 +1,12 @@
 import React, { Component } from 'react'
+import './Ball.css'
 
 class LottoBall extends Component{
     render(){
         return(
-            <p>
+            <div className="circle">
                 <h1>{this.props.num}</h1>
-            </p>
+            </div>
         )
     }
 }

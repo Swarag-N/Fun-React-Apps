@@ -28,6 +28,7 @@ class RollDie extends Component{
     render(){
         return (
             <div className="RollDie">
+                <h1>Roll Dice</h1>
                 <Die face={this.state.currentNum1} roll={this.state.isRolling}/>
                 <Die face={this.state.currentNum2} roll={this.state.isRolling}/>
                 <button onClick={this.rand} disabled={this.state.isRolling}>Change</button>

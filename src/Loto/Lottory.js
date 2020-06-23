@@ -1,5 +1,6 @@
 import React, { Component } from 'react'
 import LottoBall from './Ball';
+import "./Lottory.css"
 class Lottory extends Component{
     constructor(props){
         super(props)
@@ -24,7 +25,10 @@ class Lottory extends Component{
     render(){
         return (
             <div className='Lottory'>
-            {this.state.num.map(n => <LottoBall num={n}/>)}
+                <h1> Genetrate Six Random Numbers</h1>
+                <div className="Lottory-balls">
+                {this.state.num.map(n => <LottoBall num={n}/>)}
+                </div>
             <button onClick={this.newNum}>Change</button>
             </div>
         )

@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Coin from './Coin'
+import './Flip.css'
 
 class Filp extends Component {
   constructor(props){
@@ -22,7 +23,7 @@ class Filp extends Component {
   render() {
     return (
       <div className="Flip">
-        <h1>Hello</h1>
+        <h1>Flip a Coin</h1>
       <h2>Num of Flips: {this.state.numOfFlips} Heads: {this.state.headCount} Tails:{this.state.tailCount}</h2>
         <button onClick={this.flipFlag}>Change</button>
         {this.state.current!=null && <Coin flag={this.state.current}/>}

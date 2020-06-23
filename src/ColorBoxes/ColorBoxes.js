@@ -14,8 +14,11 @@ class ColorBoxes extends Component{
         let boxes = Array.from({length:this.props.nBoxes})
                         .map(()=>(<Box/>))
         return(
+            <div>
+                <h1>Diffrent Colours</h1>
             <div className="colorBoxes">
                 {boxes}
+            </div>
             </div>
         )
     }

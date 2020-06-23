@@ -1,0 +1,8 @@
+.Lottory-balls{
+    display: flex;
+}
+
+.Lottory{
+    justify-content: center;
+    align-items:center ;
+}
