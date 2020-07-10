@@ -18,7 +18,6 @@ class Clicker extends Component{
             }
             return {num:randInt}
         })
-        console.log(this.state.num)
     }
     render(){
         return(

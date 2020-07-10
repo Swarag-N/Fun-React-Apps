@@ -6,3 +6,10 @@
     justify-content: center;
     align-items:center ;
 }
+
+.Lottory button{
+    margin-top: 2em;
+    border: none;
+    text-decoration: none;
+
+}

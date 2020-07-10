@@ -1,11 +1,14 @@
 import React, { Component } from 'react'
 import LottoBall from './Ball';
 import "./Lottory.css"
+
+import Button from '@material-ui/core/Button';
+
 class Lottory extends Component{
     constructor(props){
         super(props)
         this.state={
-            num :Array.from({length:this.props.numB})
+            num :Array.from({length:this.props.numB}).map(()=>("-"))
         }
         this.newNum = this.newNum.bind(this)
     }
@@ -27,9 +30,9 @@ class Lottory extends Component{
             <div className='Lottory'>
                 <h1> Genetrate Six Random Numbers</h1>
                 <div className="Lottory-balls">
-                {this.state.num.map(n => <LottoBall num={n}/>)}
+                {this.state.num.map((n,i) => <LottoBall num={n} key={i}/>)}
                 </div>
-            <button onClick={this.newNum}>Change</button>
+            <Button variant="contained" onClick={this.newNum}>Change</Button>
             </div>
         )
     }

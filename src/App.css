@@ -1,10 +1,5 @@
 .App {
   text-align: center;
-  /* background-color: #282c34; */
-  background: rgb(2,0,36);
-background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(0,212,255,1) 100%);
-  /* background-color: aliceblue; */
-  color: aliceblue;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -12,84 +7,6 @@ background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,9,121,1) 35%, rgba(
   justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+a{
+  text-decoration: none;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
-}
-
-
-hr {
-  border: 0;
-  clear:both;
-  display:block;
-  width: 96%;               
-  background-color:#FFFFFF;
-  height: 30px;
-  border-style: solid;
-  border-color: black;
-  border-width: 1px 0 0 0;
-  border-radius: 20px;
-  height: 30px;
-}
-
-button{
-  widows: 10em;
-  padding: 10px;
-  border: 0px;
-  border-radius: 10px;
-  color: aliceblue;
-  background-color: blueviolet;
-}
-
-button:hover{
-  background-color: aliceblue;
-  color: blueviolet;
-}
-
-/* .style-seven {
-  overflow: visible; /* For IE */
-  /* 
-  
-  
-
-}  */
-/* hr.style-seven:before { /* Not really supposed to work, but does */
-  /* display: block;
-  content: "";
-  height: 30px;
-  margin-top: -31px;
-  border-style: solid;
-  border-color: black;
-  border-width: 0 0 1px 0;
-  border-radius: 20px; */
-/* } */
