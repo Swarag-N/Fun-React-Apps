@@ -22,10 +22,11 @@ class Clicker extends Component{
     render(){
         return(
             <div className="Clicker">
-                <h1>Count Clicks</h1>
+                <h1>Click to Change Number</h1>
+                <p>Stops at 7</p>
                 <h1>{this.state.num}</h1>
                 <div className="Clicker-Button">
-                    {this.state.status?<h1>Game Over</h1>:<button onClick={this.eHandler}>Click Me</button>}
+                    {this.state.status?<h1>Game Over</h1>:<button style={{border:"none",backgroundColor:"inherit"}} onClick={this.eHandler}>Click Me</button>}
                 </div>
             </div>
         )

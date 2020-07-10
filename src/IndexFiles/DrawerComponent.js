@@ -1,4 +1,4 @@
-import React, { Component } from 'react'
+import React, { Component} from 'react'
 
 import {Link} from 'react-router-dom'
 
@@ -12,19 +12,33 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import List from '@material-ui/core/List';
 import ListItem from '@material-ui/core/ListItem';
 import ListItemText from '@material-ui/core/ListItemText';
-import ListItemIcon from '@material-ui/core/ListItemIcon';
 import Button from '@material-ui/core/Button';
+import Collapse from '@material-ui/core/Collapse';
 
-import ColorLensIcon from '@material-ui/icons/ColorLens';
+// import ColorLensIcon from '@material-ui/icons/ColorLens';
+import ExpandLess from '@material-ui/icons/ExpandLess';
+import ExpandMore from '@material-ui/icons/ExpandMore';
 
 
 class DrawerComponent extends Component {
+    constructor (props){
+        super(props);
+        this.state={
+            openHelloWorld:true
+        }
+        this.handleopenHelloWorld = this.handleopenHelloWorld.bind(this)
+
+    }
+
+    handleopenHelloWorld = () => {
+        this.setState(st=>{ return {openHelloWorld:!st.openHelloWorld}})
+    };
     static  defaultProps ={
         routes:[
             {
                 url:"/color",
-                name:"Colour Boxes"},
-            {
+                name:"Colour Boxes"
+            },{
                 url:'/rolldie',
                 name:"Roll Die"
             },{
@@ -34,13 +48,17 @@ class DrawerComponent extends Component {
                 url:'/lottory',
                 name:"Lottory"
             },{
-                url:'flip',
+                url:'/flip',
                 name:'Flip'
+            },{
+                url:'/lights-out',
+                name:'Lights Out'
             }
         ]
     }
     render() {
         const {open,handleDrawerClose,routes} = this.props;
+        const {openHelloWorld} = this.state;
         return (
             <Drawer
                 variant="persistent"
@@ -52,20 +70,21 @@ class DrawerComponent extends Component {
                 </IconButton>
                 <Divider/>
                 <List>
-                    {routes.map(route=>(
-                    <Link key={route.url} to={route.url}>
-                    <ListItem key={route.url}>
-                    <Button key={route.url}>
-                        <ListItemIcon>
-                            <ColorLensIcon/>
-                        </ListItemIcon>
-                        <ListItemText>
-                            {route.name}
-                        </ListItemText>
-                    </Button>
+                    <ListItem onClick={this.handleopenHelloWorld}>
+                        <ListItemText primary="Hello World React" />
+                        {openHelloWorld ? <ExpandLess /> : <ExpandMore />}
                     </ListItem>
-                    </Link>
-                    ))}
+                    <Collapse in={openHelloWorld} timeout="auto" unmountOnExit>
+                        {routes.map(route=>(
+                            <Link key={route.url} to={route.url}>
+                            <ListItem key={route.url}>
+                            <Button key={route.url}>
+                            <ListItemText primary={route.name}/>
+                            </Button>
+                            </ListItem>
+                            </Link>
+                        ))}
+                    </Collapse>
                 </List>
             </Drawer>
         )

@@ -6,6 +6,8 @@ import Paper from '@material-ui/core/Paper';
 
 import Navbar from './IndexFiles/NavBar'
 import DrawerComponent from "./IndexFiles/DrawerComponent";
+
+import Board from './lightsout/Board'
 import Clicker from './Clicker/Clicker'
 import RollDie from './Dice/RollDie';
 import Lottory from './Loto/Lottory';
@@ -32,16 +34,17 @@ function App() {
     <div className="App">
       <Navbar handleDrawerOpen={handleDrawerOpen}/>
       <DrawerComponent handleDrawerClose={handleDrawerClose} open={open}/>
+      <Paper style={{padding:"2rem",maxWidth:"60%",maxHeight:"90vh"}}>
       <Switch>
-      <Paper style={{padding:"2rem",maxWidth:"60%"}}>
-        <Route exact default path='/color'component={ColorBoxes}/>
+        <Route exact path='/color'component={ColorBoxes}/>
         <Route exact path='/flip'component={Flip}/>
         <Route exact path='/lottory'component={Lottory }/>
         <Route exact path='/rolldie'component={RollDie}/>
         <Route exact path='/click'component={Clicker}/>
-        <Route/>
-      </Paper>
+        <Route exact path='/lights-out'component={Board}/>
+        <Route component={Board}/>
       </Switch>
+      </Paper>
     </div>
     </HashRouter>
   );
